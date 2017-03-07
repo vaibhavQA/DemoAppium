@@ -1,0 +1,9 @@
+@test
+Feature: contact
+
+  Scenario: Verify user is able to Add contact                                              # src/com/test/Test.feature:3
+    Given User is landed on App Home page                                                   # StepDef.landingPage()
+    When user taps on Add contact button                                                    # StepDef.tapOnAddContact()
+    Then user navigates to Add contact page                                                 # StepDef.verifyAddContactPage()
+    When user Adds a contact using name "monu", mobile "87467577578" and email "asgd@v.com" # StepDef.AddDetails(String,String,String)
+    Then verify the name "monu" under the list                                              # StepDef.verifyAddedName(String)
